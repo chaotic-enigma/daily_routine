@@ -10,7 +10,7 @@ from dash.dependencies import Input, Output
 app = dash.Dash(__name__)
 app.scripts.config.serve_locally = True
 
-today_tasks = 15
+today_tasks = 25
 
 specific_day = {
 	'Tasks' : [None] * today_tasks,
