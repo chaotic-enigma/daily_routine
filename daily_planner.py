@@ -43,7 +43,7 @@ app.layout = html.Div([
 			], className='row'),
 		], className='nine columns'),
 		html.Div([
-			html.Div(html.H3('Key points'), 
+			html.Div(html.H5('Key points'), 
 		 		style={'textAlign' : 'center'}),
 			html.Hr(),
 			html.Div([
