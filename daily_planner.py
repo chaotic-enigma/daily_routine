@@ -46,12 +46,13 @@ app.layout = html.Div([
 			html.Div(html.H5('Key points'), 
 		 		style={'textAlign' : 'center'}),
 			html.Hr(),
+			dcc.Markdown('''Add important events'''),
 			html.Div([
 				dcc.DatePickerSingle(
 					id='date-picker-single',
 					date=dtt.now()			
 				)
-			], style={'margin-bottom' : 30}),
+			], style={'margin-top' : 20, 'margin-bottom' : 30}),
 			html.Div([
 				dcc.Textarea(
 					placeholder='Key points',
