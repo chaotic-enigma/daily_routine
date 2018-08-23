@@ -83,12 +83,24 @@ app.layout = html.Div([
 )
 def track_progress(rows):
 	ddf = pd.DataFrame(rows)
-	return {
-		'data' : [
-			{'x' : ddf['Tasks'], 'y' : ddf['Guess Time'], 'name' : 'Estimated'},
-			{'x' : ddf['Tasks'], 'y' : ddf['Time Taken'], 'name' : 'Taken'}
-		]
-	}
+	data = []
+	data.append(
+		go.Scatter(
+			x=ddf['Tasks'],
+			y=ddf['Guess Time'],
+			name='Estimated',
+			mode='lines+markers'
+		)
+	)
+	data.append(
+		go.Scatter(
+			x=ddf['Tasks'],
+			y=ddf['Time Taken'],
+			name='Taken',
+			mode='lines+markers'
+		)
+	)
+	return {'data' : data}
 
 app.css.append_css({
 	'external_url' : 'https://codepen.io/chriddyp/pen/bWLwgP.css'
